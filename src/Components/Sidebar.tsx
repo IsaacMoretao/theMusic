@@ -1,6 +1,7 @@
 import { FolderSimplePlus } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { Musics } from "./SubComponents/Musics";
+import { MusicaGet } from '../Assets/Music/Musica'
 
 type Repository = {
   Título: string;
@@ -10,16 +11,16 @@ type Repository = {
 
 export function Sidebar(){
 
-  /*const [repositories, setRepositories] = useState<Repository[]>([])
+  const [repositories, setRepositories] = useState<Repository[]>([])
   
   useEffect(() => {
-    fetch(`../Assets/Music/Moon-DoNotLookBack.mp3`)
+    fetch(`https://api.spotify.com/v1/users/jmperezperez`)
     .then(response => response.json())
     .then(data => {
       console.log(data)
       setRepositories(data)
     })
-  }, [])*/
+  }, [])
 
   return(
     <div className="

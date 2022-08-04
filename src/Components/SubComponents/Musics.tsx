@@ -9,7 +9,7 @@ export function Play(){
         <source data-src={Moon} type="audio/mp3" />
       </Audio>
       
-      <Controls pin="center" >
+      <Controls pin="center"  >
         <PlaybackControl hideTooltip
         style={{
           fontSize: '20px',
