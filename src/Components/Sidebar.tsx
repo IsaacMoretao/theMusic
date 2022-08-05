@@ -1,7 +1,7 @@
 import { FolderSimplePlus } from "phosphor-react";
 import { useEffect, useState } from "react";
-import { Musics } from "./SubComponents/Musics";
 import { MusicaGet } from '../Assets/Music/Musica'
+import axios from 'axios'
 
 type Repository = {
   Título: string;
@@ -10,17 +10,39 @@ type Repository = {
 }
 
 export function Sidebar(){
+  /* let Url = [`https://shazam.p.rapidapi.com/songs/list-recommendations`];
+   const [movieList, setMovieList] = useState<Object>({});
+   
 
-  const [repositories, setRepositories] = useState<Repository[]>([])
+  useEffect(() =>{
+    const loadAll = async () => {
+      let list: Array<String> = await Musics.getHomeList();
+      setMovieList(list);
+    
+    }
+    loadAll();
+  }, []);*/
+
+ 
   
-  useEffect(() => {
-    fetch(`https://api.spotify.com/v1/users/jmperezperez`)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-      setRepositories(data)
-    })
-  }, [])
+  const Options: any = {
+    method: 'GET',
+    url: ['https://shazam.p.rapidapi.com/songs/list-recommendations'],
+    params: {key: '484129036', locale: 'pt-BR'},
+    headers: {
+      'X-RapidAPI-Key': '61f27a1bf2mshfb0f043e9f7c322p145e9ajsnf77109910b5d',
+      'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
+    }
+  };
+  
+  
+  axios.request(Options ).then(function (response) {
+    console.log(response.data);
+  }).catch(function (error) {
+    console.error(error);
+  });
+  
+
 
   return(
     <div className="
@@ -55,29 +77,18 @@ export function Sidebar(){
 
       </section>
       <section className="p-[10px] overflow-y-scroll w-full">
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
+
+      {Options.map((title: any) => (
+          <div>
+            dzfgdsfgds
+          </div>
+          
+        ))}
+
       </section>
       <a href="https://github.com/IsaacMoretao" className="mt-auto font-bold">&copy; Isaac Moretão</a>
     </div>
   )
 }
+
+

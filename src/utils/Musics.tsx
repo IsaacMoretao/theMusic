@@ -1,4 +1,4 @@
-const API_KEY = '../Assets/Music/';
+const API_KEY = '61f27a1bf2mshfb0f043e9f7c322p145e9ajsnf77109910b5d';
 
 
 const basicFetch = async (endpoint: string) => {
@@ -13,9 +13,9 @@ export default{
 
     return [
       {
-        Name: API_KEY,
-        Author: 'Originais da Netflix',
-        time: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
+        title: API_KEY,
+        Author: 'subtitle',
+        time: await basicFetch(`url`)
       },
     ]
   }
