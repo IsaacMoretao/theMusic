@@ -10,9 +10,10 @@ type Repository = {
 }
 
 export function Sidebar(){
-  /* let Url = [`https://shazam.p.rapidapi.com/songs/list-recommendations`];
-   const [movieList, setMovieList] = useState<Object>({});
+   let Url = [`https://shazam.p.rapidapi.com/songs/list-recommendations`];
+   const [movieList, setMovieList] = useState([{}]);
    
+   /*
 
   useEffect(() =>{
     const loadAll = async () => {
@@ -23,25 +24,30 @@ export function Sidebar(){
     loadAll();
   }, []);*/
 
- 
+  if (movieList!){
+
+    const options = {
+      method: 'GET',
+      url: 'https://shazam.p.rapidapi.com/charts/list',
+      headers: {
+        'X-RapidAPI-Key': '418701dac1msh0969e298277f182p125c64jsn5b630f240459',
+        'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
+      }
+    };
+      axios.request(options).then(function (response) {
+        console.log(response.data);
+        setMovieList(response.data);
   
-  const Options: any = {
-    method: 'GET',
-    url: ['https://shazam.p.rapidapi.com/songs/list-recommendations'],
-    params: {key: '484129036', locale: 'pt-BR'},
-    headers: {
-      'X-RapidAPI-Key': '61f27a1bf2mshfb0f043e9f7c322p145e9ajsnf77109910b5d',
-      'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
-    }
-  };
-  
-  
-  axios.request(Options ).then(function (response) {
-    console.log(response.data);
-  }).catch(function (error) {
-    console.error(error);
-  });
-  
+      }).catch(function (error) {
+        console.error(error);
+      });
+
+  }
+
+
+
+
+
 
 
   return(
@@ -78,12 +84,6 @@ export function Sidebar(){
       </section>
       <section className="p-[10px] overflow-y-scroll w-full">
 
-      {Options.map((title: any) => (
-          <div>
-            dzfgdsfgds
-          </div>
-          
-        ))}
 
       </section>
       <a href="https://github.com/IsaacMoretao" className="mt-auto font-bold">&copy; Isaac Moretão</a>
