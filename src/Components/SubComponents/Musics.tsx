@@ -1,4 +1,4 @@
-import { Player, Audio, Controls, PlaybackControl } from '@vime/react';
+import { Player, Audio, Controls, PlaybackControl, Youtube } from '@vime/react';
 import { useState } from 'react';
 import Moon from "../../Assets/Music/Moon-DoNotLookBack.mp3";
 
@@ -6,7 +6,7 @@ export function Play(){
   return(
     <Player loop className='Player' style={{width: '10px', height: '20px'}}>
       <Audio >
-        <source data-src={Moon} type="audio/mp3" />
+        <source data-src='https://www.youtube.com/watch?v=9E57yrHjymw&list=RDMM&start_radio=1' type="Youtube" />
       </Audio>
       
       <Controls pin="center"  >

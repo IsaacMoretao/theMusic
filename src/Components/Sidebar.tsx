@@ -2,6 +2,7 @@ import { FolderSimplePlus } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { MusicaGet } from '../Assets/Music/Musica'
 import axios from 'axios'
+import { Musics } from "./SubComponents/Musics";
 
 type Repository = {
   Título: string;
@@ -10,11 +11,9 @@ type Repository = {
 }
 
 export function Sidebar(){
-   let Url = [`https://shazam.p.rapidapi.com/songs/list-recommendations`];
    const [movieList, setMovieList] = useState([{}]);
    
    /*
-
   useEffect(() =>{
     const loadAll = async () => {
       let list: Array<String> = await Musics.getHomeList();
@@ -23,31 +22,6 @@ export function Sidebar(){
     }
     loadAll();
   }, []);*/
-
-  if (movieList!){
-
-    const options = {
-      method: 'GET',
-      url: 'https://shazam.p.rapidapi.com/charts/list',
-      headers: {
-        'X-RapidAPI-Key': '418701dac1msh0969e298277f182p125c64jsn5b630f240459',
-        'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
-      }
-    };
-      axios.request(options).then(function (response) {
-        console.log(response.data);
-        setMovieList(response.data);
-  
-      }).catch(function (error) {
-        console.error(error);
-      });
-
-  }
-
-
-
-
-
 
 
   return(
@@ -84,6 +58,7 @@ export function Sidebar(){
       </section>
       <section className="p-[10px] overflow-y-scroll w-full">
 
+        <Musics/>
 
       </section>
       <a href="https://github.com/IsaacMoretao" className="mt-auto font-bold">&copy; Isaac Moretão</a>
