@@ -1,13 +1,16 @@
 import { FolderSimplePlus } from "phosphor-react";
 import { useEffect, useState } from "react";
-import { Musics, Play } from "./SubComponents/Musics";
-import MusicUm from "../Assets/Music/Juice WRLD.mp3";
+import { Musics } from "./SubComponents/Musics";
 import { Audio, Controls, PlaybackControl, Player } from '@vime/react';
+import Music from "../Assets/Music/BedroomPop.mp3";
+import MusicUm from "../Assets/Music/TypeBeat2022-SLEPTON.mp3";
+import MusicDois from "../Assets/Music/Moon-DoNotLookBack.mp3";
+import MusicTres from "../Assets/Music/playback.mp3";
+import MusicQuatro from "../Assets/Music/RapFreestyleBattleHipHop.mp3";
+import MusicCinco from "../Assets/Music/TrapsoulTypeBeat-LastCall.mp3";
 
 
 export function Sidebar(){
-
-  <Play Music={`${MusicUm}`}/>
 
   return(
     <div className="
@@ -41,14 +44,13 @@ export function Sidebar(){
         
 
       </section>
-      <section className="p-[10px] overflow-y-scroll w-full">
+      <section className="p-[10px] overflow-y-scroll w-full overflow-x-hidden">
 
-        <article className='flex'>
+      <article className='flex justify-between items-center '>
           <Player loop className='Player' style={{width: '10px', height: '20px'}}>
             <Audio >
-              <source data-src='MusicUm' type="audio/mp3" />
+              <source data-src={Music} type="audio/mp3" />
             </Audio>
-        
             <Controls pin="center"  >
               <PlaybackControl hideTooltip
               style={{
@@ -59,12 +61,85 @@ export function Sidebar(){
           </Player>
           <Musics />
         </article>
+
+        <article className='flex justify-between items-center '>
+          <Player loop className='Player' style={{width: '10px', height: '20px'}}>
+            <Audio >
+              <source data-src={MusicUm} type="audio/mp3" />
+            </Audio>
+            <Controls pin="center"  >
+              <PlaybackControl hideTooltip
+              style={{
+                fontSize: '20px',
+                color: 'White'
+              }}/>
+            </Controls>
+          </Player>
+          <Musics />
+        </article>
+        <article className='flex justify-between items-center '>
+          <Player loop className='Player' style={{width: '10px', height: '20px'}}>
+            <Audio >
+              <source data-src={MusicDois} type="audio/mp3" />
+            </Audio>
+            <Controls pin="center"  >
+              <PlaybackControl hideTooltip
+              style={{
+                fontSize: '20px',
+                color: 'White'
+              }}/>
+            </Controls>
+          </Player>
+          <Musics />
+        </article>
+        <article className='flex justify-between items-center '>
+          <Player loop className='Player' style={{width: '10px', height: '20px'}}>
+            <Audio >
+              <source data-src={MusicTres} type="audio/mp3" />
+            </Audio>
+            <Controls pin="center"  >
+              <PlaybackControl hideTooltip
+              style={{
+                fontSize: '20px',
+                color: 'White'
+              }}/>
+            </Controls>
+          </Player>
+          <Musics />
+        </article>
+        <article className='flex justify-between items-center '>
+          <Player loop className='Player' style={{width: '10px', height: '20px'}}>
+            <Audio >
+              <source data-src={MusicQuatro} type="audio/mp3" />
+            </Audio>
+            <Controls pin="center"  >
+              <PlaybackControl hideTooltip
+              style={{
+                fontSize: '20px',
+                color: 'White'
+              }}/>
+            </Controls>
+          </Player>
+          <Musics />
+        </article>
+        <article className='flex justify-between items-center '>
+          <Player loop className='Player' style={{width: '10px', height: '20px'}}>
+            <Audio >
+              <source data-src={MusicCinco} type="audio/mp3" />
+            </Audio>
+            <Controls pin="center"  >
+              <PlaybackControl hideTooltip
+              style={{
+                fontSize: '20px',
+                color: 'White'
+              }}/>
+            </Controls>
+          </Player>
+          <Musics />
+        </article>
+
         
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
-        <Musics />
+
 
       </section>
       <a href="https://github.com/IsaacMoretao" className="mt-auto font-bold">&copy; Isaac Moretão</a>

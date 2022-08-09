@@ -8,30 +8,6 @@ import MusicQuatro from "../../Assets/Music/Juice WRLD.mp3";
 import MusicCinco from "../../Assets/Music/Juice WRLD.mp3";
 
 
-
-type Names = {
-  Music: any;
-}
-
-export function Play(props:Names){
-  return(
-    <Player loop className='Player' style={{width: '10px', height: '20px'}}>
-      <Audio >
-        <source data-src={props.Music} type="audio/mp3" />
-      </Audio>
-      
-      <Controls pin="center"  >
-        <PlaybackControl hideTooltip
-        style={{
-          fontSize: '20px',
-          color: 'White'
-        }}/>
-      </Controls>
-    </Player>
-
-  )
-}
-
 export function Musics(){
 
   const [select, setSelect] = useState<any>();

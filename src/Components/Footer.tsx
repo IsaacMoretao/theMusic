@@ -1,5 +1,4 @@
 import { CaretCircleDoubleLeft, CaretCircleDoubleRight, Disc } from "phosphor-react";
-import { Play } from "./SubComponents/Musics";
 
 export function Nav(){
   return(
@@ -19,7 +18,6 @@ export function Nav(){
         border border-white-500
         bg-white-100 h-[8px] w-[8px]
         flex justify-end items-center '>
-          <Play Music={"Music"} />
         </div>
 
         <figure>
