@@ -19,7 +19,7 @@ export function Nav(){
         border border-white-500
         bg-white-100 h-[8px] w-[8px]
         flex justify-end items-center '>
-          <Play />
+          <Play Music={"Music"} />
         </div>
 
         <figure>

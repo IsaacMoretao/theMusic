@@ -1,28 +1,13 @@
 import { FolderSimplePlus } from "phosphor-react";
 import { useEffect, useState } from "react";
-import { MusicaGet } from '../Assets/Music/Musica'
-import axios from 'axios'
-import { Musics } from "./SubComponents/Musics";
+import { Musics, Play } from "./SubComponents/Musics";
+import MusicUm from "../Assets/Music/Juice WRLD.mp3";
+import { Audio, Controls, PlaybackControl, Player } from '@vime/react';
 
-type Repository = {
-  Título: string;
-  description?: string;
-  clone_url?: string;
-}
 
 export function Sidebar(){
-   const [movieList, setMovieList] = useState([{}]);
-   
-   /*
-  useEffect(() =>{
-    const loadAll = async () => {
-      let list: Array<String> = await Musics.getHomeList();
-      setMovieList(list);
-    
-    }
-    loadAll();
-  }, []);*/
 
+  <Play Music={`${MusicUm}`}/>
 
   return(
     <div className="
@@ -58,7 +43,28 @@ export function Sidebar(){
       </section>
       <section className="p-[10px] overflow-y-scroll w-full">
 
-        <Musics/>
+        <article className='flex'>
+          <Player loop className='Player' style={{width: '10px', height: '20px'}}>
+            <Audio >
+              <source data-src='MusicUm' type="audio/mp3" />
+            </Audio>
+        
+            <Controls pin="center"  >
+              <PlaybackControl hideTooltip
+              style={{
+                fontSize: '20px',
+                color: 'White'
+              }}/>
+            </Controls>
+          </Player>
+          <Musics />
+        </article>
+        
+        <Musics />
+        <Musics />
+        <Musics />
+        <Musics />
+        <Musics />
 
       </section>
       <a href="https://github.com/IsaacMoretao" className="mt-auto font-bold">&copy; Isaac Moretão</a>

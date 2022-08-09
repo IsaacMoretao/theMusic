@@ -1,12 +1,23 @@
 import { Player, Audio, Controls, PlaybackControl, Youtube } from '@vime/react';
 import { useState } from 'react';
-import Moon from "../../Assets/Music/Moon-DoNotLookBack.mp3";
+import Music from "../../Assets/Music/Moon-DoNotLookBack.mp3";
+import MusicUm from "../../Assets/Music/Bedroom Pop.mp3";
+import MusicDois from "../../Assets/Music/Juice WRLD.mp3";
+import MusicTres from "../../Assets/Music/playback.mp3";
+import MusicQuatro from "../../Assets/Music/Juice WRLD.mp3";
+import MusicCinco from "../../Assets/Music/Juice WRLD.mp3";
 
-export function Play(){
+
+
+type Names = {
+  Music: any;
+}
+
+export function Play(props:Names){
   return(
     <Player loop className='Player' style={{width: '10px', height: '20px'}}>
       <Audio >
-        <source data-src='https://www.youtube.com/watch?v=9E57yrHjymw&list=RDMM&start_radio=1' type="Youtube" />
+        <source data-src={props.Music} type="audio/mp3" />
       </Audio>
       
       <Controls pin="center"  >
@@ -46,7 +57,7 @@ export function Musics(){
     hover:bg-stone-700 transition ease-in-out"
      style={{background: `${select}`, cursor: 'pointer'}}>
 
-      <Play />
+   
 
       <p className='text-[15px] max-w-[120px]'>
         <b>Nome da música</b><br />
