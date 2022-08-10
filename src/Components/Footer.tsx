@@ -1,6 +1,20 @@
 import { CaretCircleDoubleLeft, CaretCircleDoubleRight, Disc } from "phosphor-react";
+import { useState } from "react";
 
-export function Nav(){
+interface dataMusic {
+  Name: any;
+
+}
+
+
+
+export function Nav(props:dataMusic){
+
+  function MusicInFooter() {
+    const [select, setSelect] = useState<any>();
+
+    console.log(`${props.Name}`)
+  }
   return(
     <footer className='
     flex justify-around
