@@ -1,6 +1,6 @@
 # TheMusic
  
-<img href='/src/Assets/Images/Tela.png' />
+<img href='./src/Assets/Images/Tela.png' />
 <p style='text-align: center'>
 Esse é um projeto com Musicas, que usas o tailwind css juntamente com o vime/core,  <br/>
 uma demonstração das minhas hablidades em reactJS, tailwind e vime/core.
