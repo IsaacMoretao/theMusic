@@ -1,7 +1,7 @@
 # TheMusic
  
-<img href='./src/Assets/Images/Tela.png' />
-<p style='text-align: center'>
+<img href="./src/Assets/Images/Tela.png" />
+<p>
 Esse é um projeto com Musicas, que usas o tailwind css juntamente com o vime/core,  <br/>
 uma demonstração das minhas hablidades em reactJS, tailwind e vime/core.
 </p>
@@ -32,7 +32,7 @@ uma demonstração das minhas hablidades em reactJS, tailwind e vime/core.
 
 # Isaac Moretão
 <br/>
-<p style='text-align: center' >
+<p>
 Esse projeto foi feito para demonstrar minhas habilidades em React,  <br/>
 meu objetivo é engrassar no mercado como programador frontEnd, e você pode me ajudar <br/>
 com uma estrela no projeto, e se puder comentar sobre, eu serei muito grato! <br/>

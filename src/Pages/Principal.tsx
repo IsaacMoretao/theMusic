@@ -1,4 +1,3 @@
-import { Nav } from "../Components/Footer"
 import { Sidebar } from "../Components/Sidebar"
 
 export function Principal(){
