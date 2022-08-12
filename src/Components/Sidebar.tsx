@@ -1,18 +1,15 @@
-import { FolderSimplePlus } from "phosphor-react";
-import { useEffect, useState } from "react";
+import { Copyright, FolderSimplePlus } from "phosphor-react";
 import { Musics } from "./SubComponents/Musics";
-import { Audio, Controls, PlaybackControl, Player, Vimeo } from '@vime/react';
+import { Audio, Controls, PlaybackControl, Player, ScrubberControl } from '@vime/react';
 import Music from "../Assets/Music/BedroomPop.mp3";
 import MusicUm from "../Assets/Music/TypeBeat2022-SLEPTON.mp3";
 import MusicDois from "../Assets/Music/Moon-DoNotLookBack.mp3";
 import MusicTres from "../Assets/Music/playback.mp3";
 import MusicQuatro from "../Assets/Music/RapFreestyleBattleHipHop.mp3";
 import MusicCinco from "../Assets/Music/TrapsoulTypeBeat-LastCall.mp3";
-import { Nav } from "./Footer";
 
 
 export function Sidebar(){
-
 
 
   return(
@@ -41,8 +38,8 @@ export function Sidebar(){
         p-[10px] border-b-[1px]
         border-white-200'>
 
-          <FolderSimplePlus size={32} color="#f5f5f5" weight="bold" />
-          <span className="font-bold">ADD MÚSIC</span>
+          <Copyright size={32} color="#ffffff" weight="bold" />
+          <span className="font-bold">ISAAC MORETÃO</span>
 
         </article>
         
@@ -55,9 +52,6 @@ export function Sidebar(){
         <FMusicTres/>
         <FMusicQuatro/>
         <FMusicCinco/>
-        <Player controls >
-          <Vimeo videoId="411652396" style={{display: 'hidden'}}/>
-        </Player>
 
       </section>
       <a href="https://github.com/IsaacMoretao" className="mt-auto font-bold">&copy; Isaac Moretão</a>
@@ -72,31 +66,47 @@ export function Sidebar(){
 export function FMusic(){
 
   return(
-    <article className='flex justify-between items-center '>
-      <Player className='Player' style={{width: '10px', height: '20px'}}>
+    <article className='flex justify-between items-center hover:bg-stone-700 transition ease-in-out'>
+      <Player className='Player'
+      style={{
+        width: '10px',
+        position: 'absolute',
+        height: '20px'
+      }}>
         <Audio >
           <source data-src={Music} type="audio/mp3"/>
         </Audio>
         <div>
-          <Controls  pin="center">
-            <PlaybackControl hideTooltip
+
+          <Controls  pin="center"> 
+           <PlaybackControl hideTooltip
             style={{
               fontSize: '20px',
               color: 'White'
             }}/>
+          <ScrubberControl />
+          
+            
           </Controls>
         </div>
+
         
       </Player>
 
-      <Musics />
+      <Musics nome={"BedroomPop"} subNome={"Music..."} />
     </article>
   )
 }
 export function FMusicUm(){
   return(
-    <article className='flex justify-between items-center '>
-      <Player className='Player' style={{width: '10px', height: '20px'}}>
+    <article className='flex justify-between items-center hover:bg-stone-700 transition ease-in-out'>
+      <Player className='Player'
+      style={{
+        width: '10px',
+        position: 'absolute',
+        height: '20px'
+      }}>
+
         <Audio >
           <source data-src={MusicUm} type="audio/mp3" />
         </Audio>
@@ -108,15 +118,20 @@ export function FMusicUm(){
           }}/>
         </Controls>
       </Player>
-      <Musics />
+      <Musics nome={"SLEPTON"} subNome={"Type Beat 2022"} />
   </article>
   )
 }
 
 export function FMusicDois(){
   return(
-    <article className='flex justify-between items-center '>
-      <Player className='Player' style={{width: '10px', height: '20px'}}>
+    <article className='flex justify-between items-center hover:bg-stone-700 transition ease-in-out'>
+      <Player className='Player'
+        style={{
+          width: '10px',
+          position: 'absolute',
+          height: '20px'
+        }}>
         <Audio>
           <source data-src={MusicDois} type="audio/mp3"/>
         </Audio>
@@ -128,15 +143,21 @@ export function FMusicDois(){
           }}/>
         </Controls>
       </Player>
-      <Musics />
+      <Musics nome={"Moon"} subNome={"Do Not Look Back"} />
     </article>
   )
 }
 
 export function FMusicTres(){
   return(
-    <article className='flex justify-between items-center '>
-      <Player className='Player' style={{width: '10px', height: '20px'}}>
+    <article className='flex justify-between items-center hover:bg-stone-700 transition ease-in-out'>
+      <Player className='Player'
+        style={{
+          width: '10px',
+          position: 'absolute',
+          height: '20px'
+        }}>
+
         <Audio >
           <source data-src={MusicTres} type="audio/mp3" />
         </Audio>
@@ -148,15 +169,21 @@ export function FMusicTres(){
           }}/>
         </Controls>
       </Player>
-      <Musics />
+      <Musics nome={"playback"} subNome={"Music..."} />
     </article>
   )
 }
 
 export function FMusicQuatro(){
   return(
-    <article className='flex justify-between items-center '>
-      <Player className='Player' style={{width: '10px', height: '20px'}}>
+    <article className='flex justify-between items-center hover:bg-stone-700 transition ease-in-out'>
+      <Player className='Player'
+        style={{
+          width: '10px',
+          position: 'absolute',
+          height: '20px'
+        }}>
+
         <Audio >
           <source data-src={MusicQuatro} type="audio/mp3" />
         </Audio>
@@ -168,14 +195,20 @@ export function FMusicQuatro(){
           }}/>
         </Controls>
       </Player>
-      <Musics />
+      <Musics nome={"Rap Freestyle"} subNome={"Battle HipHop"} />
     </article>
   )
 }
 export function FMusicCinco(){
   return(
-    <article className='flex justify-between items-center '>
-      <Player className='Player' style={{width: '10px', height: '20px'}}>
+    <article className='flex justify-between items-center hover:bg-stone-700 transition ease-in-out'>
+      <Player className='Player'
+        style={{
+          width: '10px',
+          position: 'absolute',
+          height: '20px'
+        }}>
+
         <Audio >
           <source data-src={MusicCinco} type="audio/mp3" />
         </Audio>
@@ -187,7 +220,7 @@ export function FMusicCinco(){
           }}/>
         </Controls>
       </Player>
-      <Musics />
+      <Musics nome={"Trapsoul"} subNome={"LastCall"} />
     </article>
   )
 }

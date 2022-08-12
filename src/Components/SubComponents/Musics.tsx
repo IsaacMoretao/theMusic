@@ -1,14 +1,11 @@
-import { Player, Audio, Controls, PlaybackControl, Youtube } from '@vime/react';
 import { useState } from 'react';
-import Music from "../../Assets/Music/Moon-DoNotLookBack.mp3";
-import MusicUm from "../../Assets/Music/Bedroom Pop.mp3";
-import MusicDois from "../../Assets/Music/Juice WRLD.mp3";
-import MusicTres from "../../Assets/Music/playback.mp3";
-import MusicQuatro from "../../Assets/Music/Juice WRLD.mp3";
-import MusicCinco from "../../Assets/Music/Juice WRLD.mp3";
 
+type Name= {
+  nome: string,
+  subNome: String
+}
 
-export function Musics(){
+export function Musics(props:Name){
 
   const [select, setSelect] = useState<any>();
 
@@ -29,15 +26,14 @@ export function Musics(){
     flex w-[100%]
     overflow-x-hidden overflow-y-hidden
     items-center justify-around p-[10px] 
-    border-b-[1px] border-white-100
-    hover:bg-stone-700 transition ease-in-out"
+    border-b-[1px] border-white-100"
      style={{background: `${select}`, cursor: 'pointer'}}>
 
    
 
-      <p className='text-[15px] max-w-[120px]'>
-        <b>Nome da música</b><br />
-        dsoifjpsaodijf
+      <p className='text-[15px] min-w-[120px]'>
+        <b>{props.nome}</b><br />
+        {props.subNome}
       </p>
     </article>
   )
