@@ -39,7 +39,7 @@ export function Sidebar(){
         border-white-200'>
 
           <Copyright size={32} color="#ffffff" weight="bold" />
-          <span className="font-bold">ISAAC MORETÃO</span>
+          <span className="font-bold">IsaacMoretão</span>
 
         </article>
         
