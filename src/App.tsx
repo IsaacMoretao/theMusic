@@ -1,10 +1,13 @@
 import './input.css'
 import { Principal } from './Pages/Principal'
-import { ApolloProvider } from '@apollo/client'
+import { Route, Routes } from 'react-router-dom'
+
 function App() {
 
   return (
-    <Principal/>
+    <Routes>
+      <Route path="/theMusic/" element={<Principal/>}/>
+    </Routes>
   )
 }
 
