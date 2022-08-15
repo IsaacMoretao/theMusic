@@ -2,7 +2,7 @@ import { Sidebar } from "../Components/Sidebar"
 
 export function Principal(){
   return(
-    <div className="flex bg-hero-pattern bg-cover">
+    <div className="flex bg-Image bg-cover">
 
       <Sidebar/>
       

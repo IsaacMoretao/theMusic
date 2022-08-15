@@ -12,7 +12,7 @@ module.exports = {
         sans: 'Roboto, sans-serif'
       },
       backgroundImage: {
-        'hero-pattern': "url('./src/Assets/Images/wallpaper.jpg') "
+        'Image': "url('./src/Assets/Images/wallpaper.jpg') "
       },
       colors: {
         white: {
