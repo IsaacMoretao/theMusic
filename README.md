@@ -2,7 +2,7 @@
  
 <img href="./src/Assets/Images/Tela.png" />
 <p>
-Esse é um projeto com Musicas, que usas o tailwind css juntamente com o vime/core,  <br/>
+Esse é um projeto com Musicas, que usa o tailwind css juntamente com o vime/core,  <br/>
 uma demonstração das minhas hablidades em reactJS, tailwind e vime/core.
 </p>
 
